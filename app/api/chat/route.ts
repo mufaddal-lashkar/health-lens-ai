@@ -7,6 +7,10 @@ const groq = createGroq({
   apiKey: process.env.GROQ_API_KEY,
 });
 
+const addTwoNumbers = () => {
+  
+}
+
 export const runtime = 'edge';
 
 export async function POST(req: Request) {
@@ -37,7 +41,10 @@ export async function POST(req: Request) {
           Examples of Hinglish inputs:
           - "Mujhe fever aur sore throat ho raha hai."
           - "Body pain aur cold lag raha hai."
-          Provide responses in the language of the user's input or in English if the language is unclear.`,
+          Provide responses in the language of the user's input or in English if the language is unclear.
+          
+            
+          `
       },
       { role: 'user', content: prompt },
     ],
